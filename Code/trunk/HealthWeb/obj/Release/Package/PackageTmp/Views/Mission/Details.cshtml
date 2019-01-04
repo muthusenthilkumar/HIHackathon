@@ -1,0 +1,43 @@
+﻿@model MarsMission.Models.Mission
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Mission</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VehicalName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VehicalName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExpectedLaunchDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExpectedLaunchDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Details)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Details)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MissionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

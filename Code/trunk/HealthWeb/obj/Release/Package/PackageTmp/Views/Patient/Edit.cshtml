@@ -1,0 +1,93 @@
+﻿@model HealthWeb.Models.Patient
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Patient Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Patient</legend>
+
+        @Html.HiddenFor(model => model.PatientId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)<b class="mandatory">*</b>
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ContactPerson)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactPerson)<b class="mandatory">*</b>
+            @Html.ValidationMessageFor(model => model.ContactPerson)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmergencyContactNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmergencyContactNo)<b class="mandatory">*</b>
+            @Html.ValidationMessageFor(model => model.EmergencyContactNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AdmissionDate)
+        </div>
+        <div class="editor-field">
+            @*@Html.EditorFor(model => model.AdmissionDate)*@
+             @Html.TextBoxFor(model => model.AdmissionDate, new { @class="datefield" }) <b class="mandatory">*</b>
+            @Html.ValidationMessageFor(model => model.AdmissionDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DoctorId)
+        </div>
+        <div class="editor-field">
+            @*@Html.EditorFor(model => model.DoctorId)*@
+            @Html.DropDownListFor(model => model.DoctorId, new SelectList(ViewBag.doctorlist, "Value", "Text"),"-Select Doctor-")<b class="mandatory">*</b>
+            @Html.ValidationMessageFor(model => model.DoctorId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HealthSummary)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HealthSummary)
+            @Html.ValidationMessageFor(model => model.HealthSummary)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".datefield").datepicker();
+    });
+    </script>
+}

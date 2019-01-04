@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Customer Portal</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">                    
+                    @Html.ActionLink(" ","Index","Customer", null, 
+                    new {style = "background: url('" + Url.Content("~/images/headerimage.jpg") + "') no-repeat center right; display:block; height:84px; width:264px;"  })
+                    <p class="site-title">@Html.ActionLink("Customer Portal v 10.2", "Index", "Patient")</p>
+                </div>
+                <div class="float-right">
+                   @* <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>*@
+                    <nav style="padding-top:82px;">
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Customer", "Index", "Doctor")</li>
+                            <li>@Html.ActionLink("Agent", "Index", "Patient")</li>
+                            @*<li>@Html.ActionLink("About", "About", "Home")</li>*@
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Distributed Agile Studio</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Styles.Render("~/Content/themes/base/css")
+    
+        @RenderSection("scripts", required: false)
+    
+    </body>
+</html>

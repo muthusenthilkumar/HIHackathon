@@ -1,0 +1,57 @@
+﻿@model HealthWeb.Models.Doctor
+
+@{
+    ViewBag.Title = "Details";
+}
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<h2>Customer Details</h2>
+
+<fieldset>
+    <legend>Customer</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AlternateContactNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AlternateContactNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Speciality)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Speciality)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QualificationSummary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QualificationSummary)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.DoctorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

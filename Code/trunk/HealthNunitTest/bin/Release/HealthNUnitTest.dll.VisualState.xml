@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1016]E:\JenkinsRepository\workspace\HealthManagement\trunk\HealthNunitTest\bin\Release\HealthNUnitTest.dll</TopNode>
+  <SelectedNode>[0-1016]E:\JenkinsRepository\workspace\HealthManagement\trunk\HealthNunitTest\bin\Release\HealthNUnitTest.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1016]E:\JenkinsRepository\workspace\HealthManagement\trunk\HealthNunitTest\bin\Release\HealthNUnitTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1017]HealthNunitTest" Expanded="true" />
+    <Node UniqueName="[0-1018]HealthNunitTest.Controllers" Expanded="true" />
+    <Node UniqueName="[0-1000]HealthNunitTest.Controllers.DoctorControllerNunitTest" Expanded="true" />
+    <Node UniqueName="[0-1011]HealthNunitTest.Controllers.PatientControllerNunitTest" Expanded="true" />
+  </Nodes>
+</VisualState>

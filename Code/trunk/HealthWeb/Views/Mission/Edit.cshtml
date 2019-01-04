@@ -1,0 +1,61 @@
+﻿@model MarsMission.Models.Mission
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Mission</legend>
+
+        @Html.HiddenFor(model => model.MissionId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicalName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicalName)
+            @Html.ValidationMessageFor(model => model.VehicalName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ExpectedLaunchDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ExpectedLaunchDate)
+            @Html.ValidationMessageFor(model => model.ExpectedLaunchDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Details)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Details)
+            @Html.ValidationMessageFor(model => model.Details)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

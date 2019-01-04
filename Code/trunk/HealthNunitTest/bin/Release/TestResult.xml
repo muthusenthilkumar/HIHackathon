@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\JenkinsRepository\workspace\HealthManagement\trunk\HealthNunitTest\bin\Release\HealthNUnitTest.dll" total="14" errors="0" failures="5" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-10-26" time="14:29:25">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Windows\system32" machine-name="CCH1WDBAS1" user="20330" user-domain="CORP" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="E:\JenkinsRepository\workspace\HealthManagement\trunk\HealthNunitTest\bin\Release\HealthNUnitTest.dll" executed="True" result="Failure" success="False" time="0.445" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="HealthNunitTest" executed="True" result="Failure" success="False" time="0.418" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Controllers" executed="True" result="Failure" success="False" time="0.417" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="DoctorControllerNunitTest" executed="True" result="Failure" success="False" time="0.385" asserts="0">
+                <results>
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit" executed="True" result="Failure" success="False" time="0.072" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[at HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit()
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit12" executed="True" result="Failure" success="False" time="0.005" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[at HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit12()
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit3" executed="True" result="Failure" success="False" time="0.006" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[at HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit3()
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit5" executed="True" result="Failure" success="False" time="0.006" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[at HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit5()
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit7" executed="True" result="Failure" success="False" time="0.004" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[at HealthNunitTest.Controllers.DoctorControllerNunitTest.DefaultFailNUnit7()
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.NUnitAdditional" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.NUnitCreate" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.NUnitDelete" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.NUnitEdit" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="HealthNunitTest.Controllers.DoctorControllerNunitTest.NUnitIndex" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="PatientControllerNunitTest" executed="True" result="Success" success="True" time="0.018" asserts="0">
+                <results>
+                  <test-case name="HealthNunitTest.Controllers.PatientControllerNunitTest.NUnitCreate" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="HealthNunitTest.Controllers.PatientControllerNunitTest.NUnitDelete" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="HealthNunitTest.Controllers.PatientControllerNunitTest.NUnitEdit" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="HealthNunitTest.Controllers.PatientControllerNunitTest.NUnitIndex" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

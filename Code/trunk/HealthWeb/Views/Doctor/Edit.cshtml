@@ -1,0 +1,78 @@
+﻿@model HealthWeb.Models.Doctor
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Customer Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Customer</legend>
+
+        @Html.HiddenFor(model => model.DoctorId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)<b class="mandatory">*</b>
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ContactNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactNo)<b class="mandatory">*</b>
+            @Html.ValidationMessageFor(model => model.ContactNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AlternateContactNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AlternateContactNo)
+            @Html.ValidationMessageFor(model => model.AlternateContactNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Speciality)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Speciality)
+            @Html.ValidationMessageFor(model => model.Speciality)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.QualificationSummary)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.QualificationSummary)
+            @Html.ValidationMessageFor(model => model.QualificationSummary)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
